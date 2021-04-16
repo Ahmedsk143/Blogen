@@ -1,0 +1,40 @@
+<app-header [bgColor]="'bg-primary'">
+    <h1><i class="fas fa-pencil-alt"></i> Posts</h1>
+</app-header>
+<section id="search" class="py-4 mb-4 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ml-auto">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Posts...">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="posts">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 my-4" *ngFor="let post of posts">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h4> {{post.title}}</h4>
+                    <a routerLink="/edit" class="badge badge-primary ">
+                        <i class="fas fa-edit"></i> Edit
+                    </a>
+                </div>
+                <div class="card-body">
+                    <p>{{post.body}}</p>
+                </div>
+                <div class="card-footer">
+                    <h5 class="badge badge-danger ">{{post.catergory}}</h5>
+                    <small class="float-right">At {{post.date}}</small>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

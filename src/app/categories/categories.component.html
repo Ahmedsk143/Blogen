@@ -1,0 +1,31 @@
+<app-header [bgColor]="'bg-success'">
+    <h1><i class="fas fa-pencil-alt"></i> Categories</h1>
+</app-header>
+<section id="search" class="py-4 mb-4 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ml-auto">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Categories...">
+                    <div class="input-group-append">
+                        <button class="btn btn-success">Search </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="catrgories" class="py-4">
+    <div class="container">
+        <h2 class="card-header">All Categories</h2>
+        <ul class="list-group ">
+            <li class="list-group-item w-50 d-flex justify-content-between align-items-center"
+                *ngFor="let cate of categories">
+                <h4>{{cate}}</h4>
+                <a routerLink="/edit" class="badge badge-success">
+                    <i class="fas fa-edit"></i> Edit
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,55 @@
+<app-header [bgColor]="'bg-primary'">
+    <h1>
+        <i class="fas fa-cog"></i>
+        Settings
+    </h1>
+</app-header>
+<section id="actions" class="py-4 mb-4 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <a routerLink="/dashboard" class="btn btn-light btn-block">
+                    <i class="fas fa-arrow-left"></i> Go to dashboard</a>
+            </div>
+            <div class="col-md-3">
+                <a routerLink="/dashboard" class="btn btn-success btn-block">
+                    <i class="fas fa-check"></i>
+                    Save changes</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="settings" class="py-4">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h4>Your Settings</h4>
+            </div>
+            <div class="card-body">
+                <h5 for="">Allow User Registration :
+                </h5>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">Yes</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2"> No</label>
+                </div>
+                <hr>
+                <h5 for="">Allow User Registration :
+                </h5>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline11" name="customRadioInline2" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline11">Yes</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline22" name="customRadioInline2" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline22"> No</label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
